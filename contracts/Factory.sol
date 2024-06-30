@@ -31,7 +31,7 @@ contract Owner {
 
 contract Factory is Owner {
     event TokenDeployed(address indexed tokenAddress, string name, string symbol, uint256 totalSupply);
-    uint256 public etherFee = 0.003 ether;
+    uint256 public etherFee = 0.03 ether;
 
     constructor() {}
 
