@@ -52,4 +52,11 @@ contract Factory is Owner {
     function setEtherFee(uint256 newFee) external onlyOwner {
         etherFee = newFee;
     }
+
+    // Owner can withdraw accumulated ERC20 tokens
+    function withdrawTokens(address tokenAddress, uint256 amount) external onlyOwner {
+        ERC20 token = ERC20(tokenAddress);
+        require(token.balanceOf(address(this)) >= amount, "Insufficient token balance");
+        token.transfer(owner(), amount);
+    }
 }

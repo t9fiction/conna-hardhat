@@ -2,7 +2,7 @@ import { buildModule } from "@nomicfoundation/hardhat-ignition/modules";
 
 const name = "Token";
 const symbol = "TKN";
-const supply = 100000;
+const supply = 100;
 const address = '0x98586a788f437c678d64704e170CdBDCA2B6B36b';
 
 const MyERC20TokenModule = buildModule("MyERC20TokenModule", (m) => {
